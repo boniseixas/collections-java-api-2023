@@ -13,29 +13,50 @@ public class CarrinhoDeCompras {
 
     //methods
     public void adicionarItem(String nome, double preco, int quantidade) {
-        itens.add(new Item(nome, preco, quantidade));
+        Item item = new Item(nome, preco, quantidade);
+        this.itens.add(item);
     }
 
     public void removerItem(String nome) {
         List<Item> itensParaRemover = new ArrayList<>();
-        for (Item i : itens) {
-            if(i.getNome().equalsIgnoreCase(nome)) {
-                itensParaRemover.add(i);
+        if(!itens.isEmpty()) {
+            for (Item i : itens) {
+                if(i.getNome().equalsIgnoreCase(nome)) {
+                    itensParaRemover.add(i);
+                }
             }
+            itens.removeAll(itensParaRemover);
+
+        } else {
+            System.out.println("A lista está vazia!! Começe a comprar!!");
         }
-        itens.removeAll(itensParaRemover);
     }
 
-    public List<Double> calcularValorTotal() {
-        List<Double> valorTotal = new ArrayList<>();
-        for (Item i : itens) {
-            valorTotal.add(i.getPreco() * i.getQuantidade());
+    public double calcularValorTotal() {
+        double valorTotal = 0d;
+        if(!itens.isEmpty()) {
+            for (Item item : itens) {
+                double valorItem = item.getPreco() * item.getQuantidade();
+                valorTotal += valorItem;
+            }
+            return valorTotal;
+        } else {
+            throw new RuntimeException("A lista está vazia!!");
         }
-        System.out.println(valorTotal);
-        return valorTotal;
     }
 
     public void exibirItens() {
-        System.out.println(itens);
+        if(!itens.isEmpty()) {
+            System.out.println(this.itens);
+        } else {
+            System.out.println("A lista está vazia!");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "CarrinhoDeCompras{" +
+                "itens=" + itens +
+                '}';
     }
 }
