@@ -1,4 +1,4 @@
-package list.operacoesBasicas;
+package list.operacoesBasicas.listatarefa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,7 @@ public class ListaTarefa {
         this.tarefaList = new ArrayList<>();
     }
 
+    //methods
     public  void adicionarTarefa(String descricao) {
         tarefaList.add(new Tarefa(descricao));
     }

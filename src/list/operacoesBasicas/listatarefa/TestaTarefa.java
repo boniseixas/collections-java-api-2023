@@ -1,4 +1,6 @@
-package list.operacoesBasicas;
+package list.operacoesBasicas.listatarefa;
+
+import list.operacoesBasicas.listatarefa.ListaTarefa;
 
 public class TestaTarefa {
     public static void main(String[] args) {
