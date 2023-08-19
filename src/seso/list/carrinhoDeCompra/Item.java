@@ -1,4 +1,4 @@
-package list.operacoesBasicas.carrinhodecompra;
+package seso.list.carrinhoDeCompra;
 
 public class Item {
     //atributos

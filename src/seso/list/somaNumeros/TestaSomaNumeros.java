@@ -1,4 +1,4 @@
-package list.operacoesBasicas.somaNumeros;
+package seso.list.somaNumeros;
 
 public class TestaSomaNumeros {
     public static void main(String[] args) {

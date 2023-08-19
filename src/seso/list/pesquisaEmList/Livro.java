@@ -1,4 +1,4 @@
-package list.operacoesBasicas.pesquisaemlist;
+package seso.list.pesquisaEmList;
 
 public class Livro {
     //atributos

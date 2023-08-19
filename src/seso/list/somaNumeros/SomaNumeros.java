@@ -1,4 +1,4 @@
-package list.operacoesBasicas.somaNumeros;
+package seso.list.somaNumeros;
 
 import java.util.ArrayList;
 import java.util.List;

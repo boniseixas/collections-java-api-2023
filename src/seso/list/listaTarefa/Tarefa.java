@@ -1,4 +1,4 @@
-package list.operacoesBasicas.listatarefa;
+package seso.list.listaTarefa;
 
 public class Tarefa {
     //atributo

@@ -1,4 +1,4 @@
-package list.operacoesBasicas.pesquisaemlist;
+package seso.list.pesquisaEmList;
 
 import java.util.ArrayList;
 import java.util.List;
